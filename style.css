@@ -1,0 +1,114 @@
+/* style.css */
+
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  color: #ddd; /* warna font lembut */
+}
+
+/* Background gambar blur gelap */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("docs/background.jpg") center center / cover no-repeat;
+  filter: brightness(0.3);
+  z-index: -1;
+}
+
+/* Pusatkan kartu secara horizontal & vertikal */
+.card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  width: 90%;
+  background: rgba(255 255 255 / 0.12);
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  color: #ccc; /* font warna tidak mencolok */
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between; /* Nama kiri, foto kanan */
+  align-items: center; /* sejajar vertikal */
+  margin-bottom: 15px;
+}
+
+.profile-header h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #a0d8f7;
+  text-align: left;
+  flex: 1;
+}
+
+.profile-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 10px #00ffffaa;
+  flex-shrink: 0;
+}
+
+.about {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #bbb;
+  text-align: left;
+}
+
+/* Sosial icon tetap rata kiri */
+.social-contact {
+  text-align: left;
+}
+
+.social-contact a {
+  color: #a0d8f7;
+  font-size: 1.2rem;
+  margin-right: 12px;
+  transition: color 0.3s ease;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor; /* agar svg icon warna mengikuti */
+}
+
+.social-contact a:hover {
+  color: #00ffff;
+}
+
+/* Supaya SVG ukurannya tepat */
+.social-contact svg {
+  vertical-align: middle;
+  fill: currentColor;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-contact a:hover svg {
+  transform: scale(1.1);
+}
