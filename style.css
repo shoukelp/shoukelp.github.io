@@ -1,6 +1,4 @@
 /* style.css */
-
-/* Reset dasar */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +15,6 @@ html {
   color: #ddd; /* warna font lembut */
 }
 
-/* Background gambar blur gelap */
 .background {
   position: fixed;
   top: 0;
@@ -29,7 +26,6 @@ html {
   z-index: -1;
 }
 
-/* Pusatkan kartu secara horizontal & vertikal */
 .card {
   position: fixed;
   top: 50%;
@@ -43,13 +39,13 @@ html {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(12px);
   text-align: center;
-  color: #ccc; /* font warna tidak mencolok */
+  color: #ccc;
 }
 
 .profile-header {
   display: flex;
-  justify-content: space-between; /* Nama kiri, foto kanan */
-  align-items: center; /* sejajar vertikal */
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 15px;
 }
 
@@ -81,7 +77,6 @@ html {
   text-align: left;
 }
 
-/* Sosial icon tetap rata kiri */
 .social-contact {
   text-align: left;
 }
@@ -93,14 +88,13 @@ html {
   transition: color 0.3s ease;
   display: inline-block;
   vertical-align: middle;
-  fill: currentColor; /* agar svg icon warna mengikuti */
+  fill: currentColor;
 }
 
 .social-contact a:hover {
   color: #00ffff;
 }
 
-/* Supaya SVG ukurannya tepat */
 .social-contact svg {
   vertical-align: middle;
   fill: currentColor;
@@ -111,4 +105,19 @@ html {
 
 .social-contact a:hover svg {
   transform: scale(1.1);
+}
+
+
+/* Block text selection */
+body {
+　-webkit-user-select: none;
+　-moz-user-select: none;
+　-ms-user-select: none;
+　user-select: none;
+}
+
+img {
+　-webkit-user-drag: none;
+　user-drag: none;
+  pointer-events: none;
 }
